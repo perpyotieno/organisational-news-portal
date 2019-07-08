@@ -55,3 +55,20 @@ public class Sql2oUsersDaoTest {
     //helper
 
 }
+    public Review setupReview() {
+        Review review = new Review("great", "Kim", 4, 555);
+        reviewDao.add(review);
+        return review;
+    }
+
+    public Review setupReviewForRestaurant(Restaurant restaurant) {
+        Review review = new Review("great", "Kim", 4, restaurant.getId());
+        reviewDao.add(review);
+        return review;
+    }
+
+    public Restaurant setupRestaurant() {
+        Restaurant restaurant = new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874", "http://fishwitch.com", "hellofishy@fishwitch.com");
+        restaurantDao.add(restaurant);
+        return restaurant;
+    }
