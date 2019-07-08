@@ -8,13 +8,11 @@ public class Department {
     private String description;
     private int numberOfEmployees;
     private  int id;
-    private int userId;
 
-    public Department(String name, String description, int numberOfEmployees, int userId){
+    public Department(String name, String description, int numberOfEmployees){
         this.name = name;
         this.description= description;
         this.numberOfEmployees= numberOfEmployees;
-        this. userId = userId;
 
 
     }
@@ -51,14 +49,6 @@ public class Department {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -66,13 +56,12 @@ public class Department {
         Department that = (Department) o;
         return getNumberOfEmployees() == that.getNumberOfEmployees() &&
                 getId() == that.getId() &&
-                getUserId() == that.getUserId() &&
                 getName().equals(that.getName()) &&
                 getDescription().equals(that.getDescription());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getDescription(), getNumberOfEmployees(), getId(), getUserId());
+        return Objects.hash(getName(), getDescription(), getNumberOfEmployees(), getId());
     }
 }
