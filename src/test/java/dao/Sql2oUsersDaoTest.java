@@ -54,21 +54,21 @@ public class Sql2oUsersDaoTest {
 
     //helper
 
+    public Users setupUsers() {
+        Users users = new Users("perpy", "cleaning", "subordinate staff", 2);
+        usersDao.add(users);
+        return users;
+    }
+
+    public Users setupUsersForDepartment(Department department) {
+        Users users = new Users("perpy", "cleaning", "subordinate staff", department.getId());
+        usersDao.add(users);
+        return users;
+    }
+
+    public Department setupDepartment() {
+        Department department = new Department("Finance", "handle finance issues", 20);
+        departmentDao.add(department);
+        return department;
+    }
 }
-    public Review setupReview() {
-        Review review = new Review("great", "Kim", 4, 555);
-        reviewDao.add(review);
-        return review;
-    }
-
-    public Review setupReviewForRestaurant(Restaurant restaurant) {
-        Review review = new Review("great", "Kim", 4, restaurant.getId());
-        reviewDao.add(review);
-        return review;
-    }
-
-    public Restaurant setupRestaurant() {
-        Restaurant restaurant = new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874", "http://fishwitch.com", "hellofishy@fishwitch.com");
-        restaurantDao.add(restaurant);
-        return restaurant;
-    }

@@ -74,6 +74,6 @@ public class DepartmentTest {
 
     //helper
     public  Department setupDepartment(){
-        return new Department("finance","handle finance business",12,1);
+        return new Department("finance","handle finance business",12);
     }
 }
