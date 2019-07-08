@@ -68,6 +68,6 @@ public class UsersTest {
 
     //helper
     public  Users setupusers(){
-        return new Users("Otieno","handle finance business","officer");
+        return new Users("Otieno","handle finance business","officer",1);
     }
 }
