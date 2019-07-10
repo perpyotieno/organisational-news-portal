@@ -18,6 +18,19 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
+        ProcessBuilder process =new ProcessBuilder();
+        Integer port;
+
+        if(process.environment().get("PORT")!= null){
+            port = Integer.parseInt(process.environment().get("PORT"));
+
+        }
+        else{
+            port =4567;
+        }
+        port(port);
+        staticFileLocation("/public");
+
         Sql2oNewsDao newsDao;
         DepartmentDao departmentDao;
         Sql2oUsersDao usersDao;
@@ -150,8 +163,8 @@ public class App {
         });
 
         //FILTERS
-        exception(ApiException.class, (exception, req, res) -> {
-            ApiException err = exception;
+        exception(ApiException.class, (exc, req, res) -> {
+            ApiException err = (ApiException) exc;
             Map<String, Object> jsonMap = new HashMap<>();
             jsonMap.put("status", err.getStatusCode());
             jsonMap.put("errorMessage", err.getMessage());
