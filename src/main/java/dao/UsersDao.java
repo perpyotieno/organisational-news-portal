@@ -6,11 +6,12 @@ import java.util.List;
 
 public interface UsersDao {
     //create
-    void add(Users users);
+  void add(Users users);
 
     //read
     List<Users> getAll();
     List<Users> getAllUsersByDepartment(int departmentId);
+    List<Users> getAllUsersByDepartmentSortedNewestToOldest(int departmentId);
 
     //update
     //omit for now
