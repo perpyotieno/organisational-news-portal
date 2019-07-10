@@ -24,7 +24,7 @@ public class App {
         Connection conn;
         Gson gson = new Gson();
 
-        String connectionString = "jdbc:postgresql://localhost:5432/news_api";;
+        String connectionString = "jdbc:postgresql://localhost:5432/news_api";
         Sql2o sql2o = new Sql2o(connectionString, "postgres", "Bus-242-001/2014");
         departmentDao = new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
@@ -59,7 +59,7 @@ public class App {
                 throw new ApiException(404, String.format("No department with the id: \"%s\" exists", req.params("id")));
             }
             else if (departmentDao.getAllNewsByDepartment(departmentId).size()==0){
-                return "{\"message\":\"I'm sorry, but no newss are listed for this department.\"}";
+                return "{\"message\":\"I'm sorry, but no news are listed for this department.\"}";
             }
             else {
                 return gson.toJson(departmentDao.getAllNewsByDepartment(departmentId));
@@ -85,7 +85,7 @@ public class App {
             int departmentId = Integer.parseInt(req.params("departmentId"));
             Users users = gson.fromJson(req.body(), Users.class);
 
-            users.setDepartmentId(departmentId); //we need to set this separately because it comes from our route, not our JSON input.
+            users.setDepartmentId(departmentId);
             usersDao.add(users);
             res.status(201);
             return gson.toJson(users);

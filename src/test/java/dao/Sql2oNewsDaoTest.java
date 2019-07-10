@@ -35,7 +35,7 @@ public class Sql2oNewsDaoTest {
     public void tearDown() throws Exception {
        departmentDao.clearAll();
         usersDao.clearAll();
-        newsDao.clearAll();
+       newsDao.clearAll();
         System.out.println("clearing database");
     }
     @AfterClass
