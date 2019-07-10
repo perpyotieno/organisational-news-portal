@@ -1,0 +1,17 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/form.css'>
+{{/partial}}
+{{#partial "content"}}
+    <h2>CREATE</h2>
+
+    <div class="form" id="department">
+        <h3>Create Department</h3>
+        <form action="/new/department" method="POST">
+            <input type="text" name="name" placeholder="Enter Department Name" required>
+            <input type="text" name="description" placeholder="Enter Department Description" required>
+            <input type="number" name="numberOfEmployees" placeholder="Enter total Number of Employees in department">
+            <input type="submit" value="Create Department">
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

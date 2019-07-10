@@ -1,0 +1,14 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/form.css'>
+{{/partial}}
+{{#partial "content"}}
+    <h2>CREATE</h2>
+    <div class="form" id="news">
+        <h3>Create News</h3>
+        <form action="/new/news" method="POST">
+            <textarea type="text" name="news" placeholder="Enter the news" required></textarea>
+            <input type="submit" value="Publish News">
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

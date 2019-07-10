@@ -1,0 +1,15 @@
+header {
+  background-color: #131417;
+  align-content: stretch;
+}
+#nav-bar {
+  background-color: #131417;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.nav-link {
+  color: #E3D9BB;
+  padding: 30px;
+}
