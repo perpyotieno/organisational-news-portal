@@ -1,0 +1,36 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/form.css'>
+{{/partial}}
+{{#partial "content"}}
+    <h1>CREATE</h1>
+    <div class="questionnaire">
+        <br>
+        <br>
+        <br>
+
+
+        <div class="form" id="users">
+        <h3>Create User</h3>
+        <form action="/new/user" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Enter name" required><br>
+                <label for="duties">Roles</label>
+            <input type="text" name="duties" placeholder="Enter roles"><br>
+                <label for="position">Position</label>
+            <input type="text" name="position" placeholder="Enter Position"><br>
+                <label for="departmentId">Department Id</label>
+            <input type="number" name="departmentId" placeholder="Enter Department Id" ><br>
+            <input type="submit" value="Create User">
+            </div>
+        </form>
+    </div>
+    </div>
+
+{{/partial}}
+{{> layout.hbs}}
+
+
+
+
+

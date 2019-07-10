@@ -33,21 +33,34 @@ public class App {
         port(port);
         staticFileLocation("/public");
 
-        Sql2oNewsDao newsDao = new Sql2oNewsDao(DB.sql2o);
-        Sql2oUsersDao usersDao = new Sql2oUsersDao(DB.sql2o);
-        Sql2oDepartmentDao departmentDao = new Sql2oDepartmentDao(DB.sql2o);
-//        DepartmentDao departmentDao;
-//        Sql2oUsersDao usersDao;
+//        Sql2oNewsDao newsDao = new Sql2oNewsDao(DB.sql2o);
+//        Sql2oUsersDao usersDao = new Sql2oUsersDao(DB.sql2o);
+//        Sql2oDepartmentDao departmentDao = new Sql2oDepartmentDao(DB.sql2o);
+        DepartmentDao departmentDao;
+        Sql2oUsersDao usersDao;
+        Sql2oNewsDao newsDao;
         Connection conn;
-        Gson gson = new Gson();
+       Gson gson = new Gson();
 
-//        String connectionString = "jdbc:postgresql://localhost:5432/news_api";
-//        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Bus-242-001/2014");
+       String connectionString = "jdbc:postgresql://ec2-54-235-92-43.compute-1.amazonaws.com:5432/d6sjreg0noafos";
+
+        Sql2o sql2o = new Sql2o(connectionString, "qkmgrzytbocygi", "fe80bf94d95498ef3453f331016c72f2a79c2f5c95e78c11e325176356f62b82");
+        departmentDao = new Sql2oDepartmentDao(sql2o);
+        newsDao = new Sql2oNewsDao(sql2o);
+        usersDao = new Sql2oUsersDao(sql2o);
+        conn = sql2o.open();
+
+
+
+//        //String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_api";
+//        String connectionString = "jdbc:postgresql://ec2-107-21-120-104.compute-1.amazonaws.com:5432/dd882ffb4uqm12";
+////        Sql2o String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_api";
+//        Sql2o sql2o = new Sql2o(connectionString, "xkddftxsfraqws", "5f5d3259bc8ebb3621205bc08f55d9ecf0df2c958d5f2aef0253555a9c22f619");
 //        departmentDao = new Sql2oDepartmentDao(sql2o);
+//        userDao = new Sql2oUserDao(sql2o);
 //        newsDao = new Sql2oNewsDao(sql2o);
-//        usersDao = new Sql2oUsersDao(sql2o);
 //        conn = sql2o.open();
-
+//
 
 
         get("/", (request, response) -> {

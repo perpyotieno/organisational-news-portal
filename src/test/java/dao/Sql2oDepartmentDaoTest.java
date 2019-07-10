@@ -37,8 +37,8 @@ public class Sql2oDepartmentDaoTest {
     public void tearDown() throws Exception {
         System.out.println("clearing database");
        departmentDao.clearAll();
-        usersDao.clearAll();
-        newsDao.clearAll();
+//        usersDao.clearAll();
+//        newsDao.clearAll();
     }
     @AfterClass     //changed to @AfterClass (run once after all tests in this file completed)
     public static void shutDown() throws Exception{ //changed to static

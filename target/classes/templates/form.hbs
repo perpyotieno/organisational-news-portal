@@ -2,13 +2,23 @@
     <link rel='stylesheet' href='/css/form.css'>
 {{/partial}}
 {{#partial "content"}}
-    <h2>CREATE</h2>
-    <div class="form" id="news">
-        <h3>Create News</h3>
-        <form action="/new/news" method="POST">
-            <textarea type="text" name="news" placeholder="Enter the news" required></textarea>
-            <input type="submit" value="Publish News">
-        </form>
+    <h1>CREATE</h1>
+    <div class="questionnaire">
+        <br>
+        <br>
+        <br>
+
+        <div class="form" id="news">
+            <h3>Create News</h3>
+            <form action="/view" method="POST">
+                <div class="form-group">
+                    <label for="news">News</label>
+                <textarea type="text" name="news" placeholder="Enter the news" required></textarea><br>
+                <input type="submit" value="Publish News">
+                </div>
+            </form>
+        </div>
     </div>
+
 {{/partial}}
 {{> layout.hbs}}

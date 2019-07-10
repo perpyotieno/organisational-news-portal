@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="dao.Sql2oNewsDaoTest" time="2.934" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="dao.Sql2oNewsDaoTest" time="1.037" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.3+7-LTS"/>
@@ -62,11 +62,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="deletingNewsAlsoUpdatesJoinTable" time="1.111"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="noNewsReturnsEmptyList" time="0.055"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="add" time="0.204"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="addFoodTypeToDepartmentAddsTypeCorrectly" time="1.031"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="addedNewsAreReturnedFromGetAll" time="0.186"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="clearAll" time="0.038"/>
-  <testcase classname="dao.Sql2oNewsDaoTest" name="deleteByIdDeletesCorrectNews" time="0.309"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="deletingNewsAlsoUpdatesJoinTable" time="0.699"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="noNewsReturnsEmptyList" time="0.049"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="add" time="0.038"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="addFoodTypeToDepartmentAddsTypeCorrectly" time="0.11"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="addedNewsAreReturnedFromGetAll" time="0.054"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="clearAll" time="0.036"/>
+  <testcase classname="dao.Sql2oNewsDaoTest" name="deleteByIdDeletesCorrectNews" time="0.051"/>
 </testsuite>
